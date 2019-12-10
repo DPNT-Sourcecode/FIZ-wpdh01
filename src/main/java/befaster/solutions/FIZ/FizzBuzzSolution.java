@@ -11,8 +11,8 @@ public class FizzBuzzSolution {
         String replaced = aux.replaceAll(""+firstChar, "");
 
         if ((number % 3 == 0 || String.valueOf(number).contains("3"))
-                && (number % 5 == 0 || String.valueOf(number).contains("5")
-                && ((number > 10) && replaced.length() == 0))){
+                && (number % 5 == 0 || String.valueOf(number).contains("5"))
+                && (((number > 10) && replaced.length() == 0))){
             return "fizz buzz deluxe";
         } else if ((number % 3 == 0 || String.valueOf(number).contains("3"))
                 && (number % 5 == 0 || String.valueOf(number).contains("5"))){
@@ -36,3 +36,4 @@ public class FizzBuzzSolution {
         System.out.println(replaced.length());
     }
 }
+
