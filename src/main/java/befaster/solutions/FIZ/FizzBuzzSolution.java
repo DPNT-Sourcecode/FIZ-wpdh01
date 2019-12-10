@@ -12,12 +12,12 @@ public class FizzBuzzSolution {
 
         if ((number % 3 == 0 || String.valueOf(number).contains("3"))
                 && (number % 5 == 0 || String.valueOf(number).contains("5")
-                && ((number > 10) || replaced.length() == 0))){
+                && ((number > 10) && replaced.length() == 0))){
             return "fizz buzz deluxe";
         } else if ((number % 3 == 0 || String.valueOf(number).contains("3"))
                 && (number % 5 == 0 || String.valueOf(number).contains("5"))){
             return "fizz buzz";
-        } else if ((number > 10) || replaced.length() == 0) {
+        } else if ((number > 10) && replaced.length() == 0) {
             return "deluxe";
         } else if (number % 3 == 0 || String.valueOf(number).contains("3") ) {
             return "fizz";
@@ -29,6 +29,7 @@ public class FizzBuzzSolution {
     }
 
 }
+
 
 
 
