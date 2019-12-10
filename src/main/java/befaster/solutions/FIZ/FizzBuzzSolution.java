@@ -37,14 +37,20 @@ public class FizzBuzzSolution {
 
 
 
-    public boolean isDeluxe(Integer number){
-        String aux = String.valueOf(number);
-        char firstChar = aux.charAt(0);
-        String replaced = aux.replaceAll(""+firstChar, "");
+    public static boolean isDeluxe(Integer number){
+//        String aux = String.valueOf(number);
+//        char firstChar = aux.charAt(0);
+//        String replaced = aux.replaceAll(""+firstChar, "");
+//
+//        if (((number > 10) && replaced.length() == 0))
+//            return true;
+         boolean containsOneThree = String.valueOf(number).replaceFirst("3", "").contains("3");
+         boolean containsOneFive = String.valueOf(number).replaceFirst("5", "").contains("5");
 
-        if (((number > 10) && replaced.length() == 0))
+        if ((number % 3 == 0 && containsOneThree) || (number % 5 == 0 && containsOneFive))
             return true;
         return false;
+
     }
 
     public boolean isFizz(Integer number){
@@ -58,4 +64,9 @@ public class FizzBuzzSolution {
             return true;
         return false;
     }
+
+    public static void main(String[] args) {
+        System.out.println(String.valueOf(15).replaceFirst("5", "").contains("5"));
+    }
 }
+
