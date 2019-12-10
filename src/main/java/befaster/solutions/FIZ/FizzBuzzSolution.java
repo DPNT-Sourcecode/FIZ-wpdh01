@@ -28,8 +28,11 @@ public class FizzBuzzSolution {
         }
     }
 
+
+    public static void main(String[] args) {
+        String aux = String.valueOf(30);
+        char firstChar = aux.charAt(0);
+        String replaced = aux.replaceAll(""+firstChar, "");
+        System.out.println(replaced.length());
+    }
 }
-
-
-
-
