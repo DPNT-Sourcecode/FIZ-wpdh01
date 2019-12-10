@@ -66,8 +66,9 @@ public class FizzBuzzSolution {
     }
 
     public static void main(String[] args) {
-        System.out.println(isDeluxe(33));
+        System.out.println(isDeluxe(27));
     }
 }
+
 
 
