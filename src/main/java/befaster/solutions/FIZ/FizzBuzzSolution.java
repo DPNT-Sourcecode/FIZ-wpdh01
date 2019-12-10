@@ -16,7 +16,7 @@ public class FizzBuzzSolution {
             return "fizz buzz";
         } else if (isFizz(number) && isDeluxe(number)) {
             if (number%2 != 0)
-                return "fizz fake delux";
+                return "fizz fake deluxe";
             return "fizz deluxe";
         } else if (isBuzz(number) && isDeluxe(number)){
             return "buzz deluxe";
@@ -57,6 +57,7 @@ public class FizzBuzzSolution {
         return false;
     }
 }
+
 
 
 
