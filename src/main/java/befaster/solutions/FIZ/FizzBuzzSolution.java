@@ -9,14 +9,20 @@ public class FizzBuzzSolution {
 
 
         if (isFizz(number) && isBuzz(number) && isDeluxe(number)){
+            if (number%2 != 0)
+                return "fizz buzz fake deluxe";
             return "fizz buzz deluxe";
         } else if (isFizz(number) && isBuzz(number)) {
             return "fizz buzz";
         } else if (isFizz(number) && isDeluxe(number)) {
+            if (number%2 != 0)
+                return "fizz fake delux";
             return "fizz deluxe";
         } else if (isBuzz(number) && isDeluxe(number)){
             return "buzz deluxe";
         } else if (isDeluxe(number)) {
+            if (number%2 != 0)
+                return "fake deluxe";
             return "deluxe";
         } else if (isFizz(number)) {
             return "fizz";
@@ -26,6 +32,7 @@ public class FizzBuzzSolution {
             return Integer.toString(number);
         }
     }
+
 
 
     public boolean isDeluxe(Integer number){
@@ -50,6 +57,7 @@ public class FizzBuzzSolution {
         return false;
     }
 }
+
 
 
 
