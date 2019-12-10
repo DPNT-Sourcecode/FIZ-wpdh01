@@ -44,8 +44,8 @@ public class FizzBuzzSolution {
 //
 //        if (((number > 10) && replaced.length() == 0))
 //            return true;
-         boolean containsOneThree = String.valueOf(number).replaceFirst("3", "").contains("3");
-         boolean containsOneFive = String.valueOf(number).replaceFirst("5", "").contains("5");
+         boolean containsOneThree = !String.valueOf(number).replaceFirst("3", "").contains("3");
+         boolean containsOneFive = !String.valueOf(number).replaceFirst("5", "").contains("5");
 
         if ((number % 3 == 0 && containsOneThree) || (number % 5 == 0 && containsOneFive))
             return true;
@@ -66,7 +66,8 @@ public class FizzBuzzSolution {
     }
 
     public static void main(String[] args) {
-        System.out.println(String.valueOf(15).replaceFirst("5", "").contains("5"));
+        System.out.println(isDeluxe(33));
     }
 }
+
 
