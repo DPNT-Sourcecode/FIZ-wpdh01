@@ -8,18 +8,19 @@ public class FizzBuzzSolution {
 
 
 
-        if ((number % 3 == 0 || String.valueOf(number).contains("3"))
-                && (number % 5 == 0 || String.valueOf(number).contains("5"))
-                && (){
+        if (isFizz(number) && isBuzz(number) && isDeluxe(number)){
             return "fizz buzz deluxe";
-        } else if ((number % 3 == 0 || String.valueOf(number).contains("3"))
-                && (number % 5 == 0 || String.valueOf(number).contains("5"))){
+        } else if (isFizz(number) && isBuzz(number)) {
             return "fizz buzz";
+        } else if (isFizz(number) && isDeluxe(number)) {
+            return "fizz deluxe";
+        } else if (isBuzz(number) && isDeluxe(number)){
+            return "buzz deluxe";
         } else if (isDeluxe(number)) {
             return "deluxe";
-        } else if () {
+        } else if (isFizz(number)) {
             return "fizz";
-        } else if () {
+        } else if (isBuzz(number)) {
             return "buzz";
         } else {
             return Integer.toString(number);
@@ -32,7 +33,7 @@ public class FizzBuzzSolution {
         char firstChar = aux.charAt(0);
         String replaced = aux.replaceAll(""+firstChar, "");
 
-        if (((number > 10) && replaced.length() == 0)))
+        if (((number > 10) && replaced.length() == 0))
             return true;
         return false;
     }
@@ -49,5 +50,6 @@ public class FizzBuzzSolution {
         return false;
     }
 }
+
 
 
